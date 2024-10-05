@@ -1,9 +1,9 @@
 import React from 'react'
 import './Option.css'
 
-const Option = ( { option }) => {
+const Option = ( { option, onClick }) => {
     return (
-        <div className={'option'} >
+        <div className={'option'}  onClick={onClick}>
             <span>{option}</span>
         </div>
     )

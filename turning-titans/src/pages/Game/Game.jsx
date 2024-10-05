@@ -10,10 +10,17 @@ const text = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit a e
 const Game = () => {
   const [isSelected, setIsSelected] = useState(false);
 
+  const options = ['Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit a earum impedit ducimus, fugiat minus eum tempora nihil quo debitis incidunt aut enim qui, vitae cupiditate inventore harum. Enim, quas!','Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit a earum impedit ducimus, fugiat minus eum tempora nihil quo debitis incidunt aut enim qui, vitae cupiditate inventore harum. Enim, quas!','Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit a earum impedit ducimus, fugiat minus eum tempora nihil quo debitis incidunt aut enim qui, vitae cupiditate inventore harum. Enim, quas!','Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit a earum impedit ducimus, fugiat minus eum tempora nihil quo debitis incidunt aut enim qui, vitae cupiditate inventore harum. Enim, quas!'
+]
+
+  const onClick = () => {
+    setIsSelected(true);
+  };
+
   return (
     <Box sx={{ padding: 40, textAlign: 'justify', display: 'flex', flexDirection: 'column', gap: '4rem', justifyContent: 'center', alignItems: 'center' }}>
       {!isSelected ? <StoryText text={text} /> : null}
-      <Options />
+      <Options onClick={onClick} options={options} />
     </Box>
   )
 }
