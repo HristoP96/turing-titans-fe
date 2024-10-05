@@ -20,6 +20,7 @@ const StoryText = ({ text, onDone }) => {
       }}
     >
       <Typewriter
+        key={text}
         onInit={(typewriter) => {
           typewriter
             .typeString(text)
