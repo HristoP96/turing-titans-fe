@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  body {
+    background: black;
+    text-align: center;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  
+.app-container {
+    color: white;
+    text-align: center;
+    font-family: "Sofia Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100dvh;
+    width: 100%;
+  }
+
+  .app-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/public/greek.jpeg');
+    background-size: cover;
+    background-position: center; 
+    opacity: 0.5; 
+    z-index: -1; 
+}
+
+  button {
+    all: unset; 
+      display: inline-block;
+      margin: 0; 
+      padding: 0; 
+      border: none; 
+      background: none; 
+      font: inherit; 
+      color: inherit; 
+      text-align: inherit;
+      line-height: inherit;
+  }

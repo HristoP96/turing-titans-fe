@@ -1,0 +1,20 @@
+.option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #f3d22d;
+    border-radius: 25px;
+    padding: 0.5rem 1rem;
+    width: 450px;
+    text-align: left;
+    background-color: #000;
+    color: #fff;
+    font-size: 1.1rem;
+    transition: background-color 0.8s;
+  }
+  
+  .option:hover {
+    background-color: #f3d22d;
+    color: #000;
+    cursor: pointer;
+  }
