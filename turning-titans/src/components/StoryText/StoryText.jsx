@@ -2,7 +2,7 @@ import React from 'react';
 import Typewriter from 'typewriter-effect';
 import Typography from '@mui/material/Typography';
 
-const StoryText = ({ text }) => {
+const StoryText = ({ text, onDone }) => {
 
   return (
     <Typography
@@ -24,7 +24,7 @@ const StoryText = ({ text }) => {
           typewriter
             .typeString(text)
             .callFunction(() => {
-              console.log('Text has been completely displayed');
+              onDone()
             })
             .start();
         }}
