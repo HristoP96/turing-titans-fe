@@ -1,15 +1,15 @@
 import React from 'react'
 import Option from '../Option/Option'
-import './Options.css'
+import './Choices.css'
 
-const Options = ( { options, onClick }) => {
+const Choices = ( { options, onClick }) => {
   return (
     <div className='options'>
       {options.map((o, index) => (
       <Option 
         key={index}
         option={o} 
-        onClick={onClick} 
+        onClick={() => onClick(index)} 
         style={{ animationDelay: `${index * 0.1}s` }}
       />
     ))}
@@ -17,4 +17,4 @@ const Options = ( { options, onClick }) => {
   )
 }
 
-export default Options
+export default Choices
