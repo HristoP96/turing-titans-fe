@@ -12,6 +12,7 @@ const text = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit a e
 const Game = () => {
   const [isSelected, setIsSelected] = useState(false);
   const [animationKey, setAnimationKey] = useState(0);
+  const [ onFullTextDisplayed, setOnFullTextDisplayed ] = useState(false);
 
   const [options, setOptions] = useState(['Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit a earum impedit ducimus, fugiat minus eum tempora nihil quo debitis incidunt aut enim qui, vitae cupiditate inventore harum. Enim, quas!','Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit a earum impedit ducimus, fugiat minus eum tempora nihil quo debitis incidunt aut enim qui, vitae cupiditate inventore harum. Enim, quas!','Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit a earum impedit ducimus, fugiat minus eum tempora nihil quo debitis incidunt aut enim qui, vitae cupiditate inventore harum. Enim, quas!','Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit a earum impedit ducimus, fugiat minus eum tempora nihil quo debitis incidunt aut enim qui, vitae cupiditate inventore harum. Enim, quas!'
   ]);
@@ -24,10 +25,14 @@ const Game = () => {
     setAnimationKey(prev => prev + 1);
   };
 
+  const onDone = () => {
+    setOnFullTextDisplayed(true);
+  };
+
   return (
     <Box sx={{ padding: '10rem 40rem', textAlign: 'justify', display: 'flex', flexDirection: 'column', gap: '4rem', justifyContent: 'center', alignItems: 'center' }}>
-      {!isSelected ? <StoryText text={text} /> : null}
-      <Options onClick={onClick} options={options} key={animationKey}/>
+      {!isSelected && <StoryText text={text} onDone={onDone}/>}
+      {onFullTextDisplayed && <Options onClick={onClick} options={options} key={animationKey}/>}
     </Box>
   )
 }
