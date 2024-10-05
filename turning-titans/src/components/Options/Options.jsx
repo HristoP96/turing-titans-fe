@@ -10,6 +10,7 @@ const Options = ( { options, onClick }) => {
         key={index}
         option={o} 
         onClick={onClick} 
+        style={{ animationDelay: `${index * 0.1}s` }}
       />
     ))}
     </div>
