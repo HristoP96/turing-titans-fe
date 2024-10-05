@@ -11,16 +11,23 @@ const StoryText = ( { text }) => {
       color: '#fffff',
       fontWeight: 'bold',
       fontSize: '1.2rem',
+      maxWidth: '900px',
+      minWidth: '900px',
+      backgroundColor: '#000',
+      padding: '2rem',
+      border: '2px solid #f3d22d'
     }}
   >
     <Typewriter
       words={[text]}
-      loop={false}
+      loop={1}
       cursor
       cursorStyle=""
-      typeSpeed={1}
+      typeSpeed={20}
       deleteSpeed={0}
       delaySpeed={1}
+      onType={(count) => {console.log(count);
+      }}
     />
   </Typography>
   )
