@@ -32,7 +32,7 @@ const StoryText = ({ text, handleTextDisplayComplete }) => {
         options={{
           autoStart: true,
           loop: false,
-          delay: 40,
+          delay: 0,
           cursor: '' 
         }}
       />

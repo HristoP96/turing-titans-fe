@@ -3,7 +3,7 @@ import axios from 'axios';
 const buildOptions = (data) => {
     const options = {
         headers: {
-            'Content-Type': 'application/json',
+            'Content-Type': 'multipart/form-data',
         },
     };
 
