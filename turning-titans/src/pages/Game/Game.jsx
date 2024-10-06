@@ -4,7 +4,6 @@ import Box from "@mui/material/Box";
 
 import StoryText from "../../components/StoryText/StoryText";
 import Choices from "../../components/Choices/Choices";
-import Success from "../../components/Success/Success";
 
 const gameBoxStyles = {
   padding: "10rem 40rem",
@@ -61,7 +60,6 @@ const Game = () => {
           )}
         </>
       )}
-      {isSuccessful && <Success />}
     </Box>
   );
 };

@@ -1,0 +1,16 @@
+.loss {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background-color: #000;
+    padding: 2rem;
+    border: 2px solid #f3d22d;
+    border-radius: 8px;
+    font-family: 'inherit'
+}
+
+.emoji {
+    font-size: 10rem;
+}

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Confetti from "react-confetti";
 import { useNavigate } from "react-router-dom";
+import './Success.css';
 
 const Success = () => {
   const [showConfetti, setShowConfetti] = useState(true);
